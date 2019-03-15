@@ -37,3 +37,7 @@ You would need the following to access the website:
 https://github.com/munganyendesandrine/GalleryApp
 
 
+## Contact Information
+
+For more information you may need, contact me at mungasandwingsd@gmail.com
+
