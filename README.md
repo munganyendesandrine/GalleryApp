@@ -23,3 +23,12 @@ This project is a result of  developpement of a personal gallery application for
 * Bootstrap
 
 
+## Project Setup Instruction
+
+You would need the following to access the website:
+*  Smart phone/PC/laptop/Desktop/Tablet or any PDA 
+*  Linux Terminal for getting the output 
+*  Visual Studio code or other code editors to edit codes
+*  Internet connectivity (either wireless or ethernet) 
+*  A web browser(Chrome is most recommendable).
+
