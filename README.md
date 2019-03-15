@@ -9,7 +9,7 @@ MUNGANYENDE SANDRINE
 `
 # Description of project
 
-This project is a result of  developpement of a personal gallery application for displaying images. Once the image is clicked on, it is expanded as well as its details such as: Image, Image Name, Image Description, Image Location, and Image category. The project also interacts with the database by Adding, getting, searching, filtering, updating, deleting data.
+This project is a result of  developpement of a personal gallery application for displaying images. Once the image is clicked on, it is expanded as well as its details such as: Image, Image Name, Image Description, Image Location, and Image category. The project also interacts with the database by Adding, getting, searching, filtering, updating and deleting data.
 
 
 ## Technologies used
