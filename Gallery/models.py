@@ -55,9 +55,6 @@ class Image(models.Model):
     #   comments=Comment.query.filter_by(blog_id=id).all()
     #   return comments
 
-    # def save_comment(self):
-    #     db.session.add(self)
-    #     db.session.commit()
 
     # def fetch_comment():
     #     comment= Comment.query.all()

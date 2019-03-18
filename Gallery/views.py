@@ -20,3 +20,16 @@ def search_results(request):
     else:
         message = "You haven't searched for any term"
         return render(request, 'all-galleries/search.html',{"message":message})    
+
+def details(request):
+    gallery = Image.objects.all()
+    return render(request, 'all-galleries/image_details.html', {"gallery": gallery}) 
+
+# def delete_image(request, pk):
+#     gallery = get_object_or_404(Cat, pk=pk)  
+
+#     if request.method == 'POST':         
+#         gallery.delete()                     
+#         return redirect('/')             
+
+#     return render(request, 'all-galleries/today-gallery.html', {"gallery": gallery})
