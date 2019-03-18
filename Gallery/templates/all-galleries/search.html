@@ -3,22 +3,25 @@
 <div class="container">
 
   <div class="row">
-    {% if categories%}
-      <h2>Found {{ categories|length }} of searched term {{message}}</h2>
+    {% if images%}
+      <h2>Found {{ images|length }} of searched term {{message}}</h2>
     {% else %}
-      <h2> Found 0 categories for the search term {{message}}</h2>
+      <h2> Found 0 images for the search term {{message}}</h2>
     {% endif %}
 
   </div>
 
   <div class="row">
 
-  {% if categories %}
-    {% for category in categories %}
+  {% if images %}
+    {% for picture in images %}
       <div class="col-sm-6 col-md-3">
-        <a href="">
-          <h1>{{category.name}}</h1>
-        </a>
+        
+          <h1>{{picture.image_name}}</h1>
+
+          <!-- <img src="{{gallery_item.image.url}}" class="img-responsive" alt="Image"> -->
+          <img src="{{picture.image.url}}" class="img-responsive">
+        
       </div>
     {% endfor %}
   {% endif %}

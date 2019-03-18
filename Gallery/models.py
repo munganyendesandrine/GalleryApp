@@ -9,11 +9,7 @@ class Category(models.Model):
 
     def __str__(self):
         return self.name  
-
-    @classmethod
-    def search_by_name(cls,search_term):
-        gallery = cls.objects.filter(name__icontains=search_term)
-        return gallery    
+       
    
 class Location(models.Model):
     name = models.CharField(max_length =30)
@@ -49,6 +45,12 @@ class Image(models.Model):
             return image
         except DoesNotExist:
             return Image.objects.get(id=1)  
+
+    @classmethod
+    def search_by_category(cls,search_term):
+        image_category=Category.objects.filter(name__icontains=search_term)
+        images = cls.objects.filter(image_category=image_category)
+        return images         
     
     # @classmethod
     # def get_comments(cls,id):
