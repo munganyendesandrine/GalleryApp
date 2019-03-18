@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http  import HttpResponse
-from .models import Image
+from .models import Image,Category,Location
 
 
 def gallery_today(request):
@@ -21,9 +21,7 @@ def search_results(request):
         message = "You haven't searched for any term"
         return render(request, 'all-galleries/search.html',{"message":message})    
 
-def details(request):
-    gallery = Image.objects.all()
-    return render(request, 'all-galleries/image_details.html', {"gallery": gallery}) 
+
 
 # def delete_image(request, pk):
 #     gallery = get_object_or_404(Cat, pk=pk)  
