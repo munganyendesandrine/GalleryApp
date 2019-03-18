@@ -1,26 +1,29 @@
-
-{%extends 'all-galleries/base.html'%}
+{% extends 'all-galleries/base.html' %}
 {% block content %} 
 {{ block.super}}
-  <div class="container">
-    <!-- Looping through news   -->
-    {% for gallery_item in gallery %}
-   
-    <div class="column">
-      <!-- displaying Galleries -->
-      <!-- <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6"> -->
-        <h2 > {{ gallery_item.image_name }} </h2><br>
-      <!-- </div> -->
-      <!-- <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">  -->
-        <a href="" data-toggle="modal" data-target="#{{gallery_item.id}}">
-          <img src="{{gallery_item.image.url}}" class="img-responsive" alt="Image" width=200 height=200>   
-        </a> 
-        <br>
-        <button class="btn btn-primary">Copy Image Link</button> 
-        <button class="btn btn-primary">Update Image</button>
-        <button class="btn btn-primary" delete_image()>Delete Image</button> 
-      <!-- </div> -->
-    </div>
+
+<div class="container">
+
+  <!-- Looping through gallery   -->
+  {% for gallery_item in gallery %}
+
+  <div class="row">
+    <!-- displaying Gallery images -->
+    <div class="col-md-3">
+      <h2 > {{ gallery_item.image_name }} </h2><br>
+      <a href="" data-toggle="modal" data-target="#{{gallery_item.id}}">
+        <img src="{{gallery_item.image.url}}" class="img-responsive" alt="Image" width=200 height=200>   
+      </a>
+     <br>
+     <!-- <div class="row">
+      <button class="btn btn-primary">Update Image</button>
+      <button class="btn btn-primary" delete_image()>Delete Image</button> 
+    
+    </div><br>
+    <div class="row">
+      <button class="btn btn-primary">Copy Image Link</button> 
+    </div> -->
+
     <!-- Modal -->
     <div id="{{gallery_item.id}}" class="modal fade" role="dialog">
       <div class="modal-dialog">
@@ -45,18 +48,18 @@
     </div>
   </div>
     
-   
+    
   
-   
+  </div>
   
-    {% empty %}
-    <div class="row">
-      <h2 class="text-center">There No Gallery Items</h2>
-    </div>
-    {% endfor %}
-    <br>
-  
+
+  {% empty %}
+  <div class="row">
+    <h2 class="text-center">There No News Items</h2>
+  </div>
+  {% endfor %}
+</div>
+
+</div>
+
 {% endblock %}
-
-
-

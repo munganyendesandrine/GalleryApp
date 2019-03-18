@@ -57,16 +57,10 @@ class Image(models.Model):
         image_location=Location.objects.filter(name__icontains=filter_term)
         images = cls.objects.filter(image_location=image_location)
         return images
-    # @classmethod
-    # def get_comments(cls,id):
-    #   comments=Comment.query.filter_by(blog_id=id).all()
-    #   return comments
+  
 
 
-    # def fetch_comment():
-    #     comment= Comment.query.all()
-    #     return comment   
-        
+   
 
 
 
