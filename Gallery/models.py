@@ -52,6 +52,11 @@ class Image(models.Model):
         images = cls.objects.filter(image_category=image_category)
         return images         
     
+    @classmethod
+    def filter_by_location(cls,filter_term):
+        image_location=Location.objects.filter(name__icontains=filter_term)
+        images = cls.objects.filter(image_location=image_location)
+        return images
     # @classmethod
     # def get_comments(cls,id):
     #   comments=Comment.query.filter_by(blog_id=id).all()
