@@ -23,12 +23,12 @@ class LocationTestClass(TestCase):
     def test_instance(self):
         self.assertTrue(isinstance(self.Madagascar,Location))      
 
-class ImageTestClass(TestCase):
+# class ImageTestClass(TestCase):
 
-    def setUp(self):
-        # Creating a new editor and saving it
-        self.Dove= Image(image_name = 'Dove', image_description ='liked', image_location ='Kigali', image_category='Birds',image='galleryToday/dove.png')
-        self.Dove.save_image()
+#     def setUp(self):
+#         # Creating a new editor and saving it
+#         self.Dove= Image(image_name = 'Dove', image_description ='liked', image_location ='Kigali', image_category='Birds',image='galleryToday/dove.png')
+#         self.Dove.save_image()
 
     # Testing  instance
     # def test_instance(self):
