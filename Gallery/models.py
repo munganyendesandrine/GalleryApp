@@ -35,8 +35,8 @@ class Image(models.Model):
     def delete_image(self):
         self.delete()
 
-    class Meta:
-        ordering = ['image_name']    
+    # class Meta:
+    #     ordering = ['image_name']    
         
     @classmethod
     def get_image(cls,id):
